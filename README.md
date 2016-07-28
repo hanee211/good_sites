@@ -10,6 +10,8 @@ Good sites
   (http://arstechnica.com/tech-policy/2016/04/a-spiritual-successor-to-aaron-swartz-is-angering-publishers-all-over-again/)
 
   http://sci-hub.bz
-
-
   
+  
+3. Git
+  > for beginner 
+  http://nolboo.kim/blog/2013/10/06/github-for-beginner/
