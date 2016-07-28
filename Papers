@@ -1,0 +1,21 @@
+> 목표 : IoT 환경의 센서 데이터를 활용해서 문장(글)을 생성한다.
+
+> 예제 : 
+1) 공기 중에 해로운 성분이 감지되면, 해로운 성분에 대한 수치를 알려주는 것이 아니라 말로 설명해준다. 
+"지금 무슨 성분이 공기중에서 검출되었고, 그것은 몸의 어느 부분에 나쁘며 어떤 증상 유발이 예상된다." 라는 식으로.
+2) 습도 감지 센서가 습도가 높아지는 추세를 감지하고 외출을 한면 비가 올 것 같다고 알려줌. 
+3) 먼지가 많이 발생되면 청소를 해야 할 것 같다고 이야기함. 
+4) 집에서 아이가 울고 있으면 엄마에게 아기가 울고 있다고 문자가 감.(아이를 재우고 외출 한다던지, 아니면 아이들끼리 노는 상황에서)
+
+> 정리 : 
+이 상황은 문장을 생성하는 기능에 특정한 context를 추가한 뒤 문장을 생성하는 것이다. 
+즉 RNN 을 통해 학습한 machine(만들 SW 혹은 기능을  machine 이라 지칭) 에 어떤 단어를 넣어야 할지 골라야 함. 
+
+하지만 일반 RNN 을 사용하는데 문제가 있음. 
+그냥 shakespear 쓰기 처럼 사용되는 것이 아니라 
+
+
+1. CONTEXT DEPENDENT RECURRENT NEURAL NETWORK LANGUAGE MODEL 
+PAPERS : https://www.semanticscholar.org/paper/Context-dependent-recurrent-neural-network-Mikolov-Zweig/04e0fefb859f4b02b017818915a2645427bfbdb2/pdf
+ppt : http://www.fit.vutbr.cz/research/groups/speech/servite/2010/rnnlm_mikolov.pdf
+
