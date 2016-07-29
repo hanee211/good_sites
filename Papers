@@ -14,6 +14,26 @@
 하지만 일반 RNN 을 사용하는데 문제가 있음. 
 그냥 shakespear 쓰기 처럼 사용되는 것이 아니라 
 
+> 문제:
+현재는 문장을 학습하여, 단어 다음의 단어 혹은 글자 다음의 글자를 예측해서 generate 하는 구조이다. 
+그런데 만약 현재 있는 데이터를 이용하여 문장을 생성하고 싶으면?
+이건 정말 어려운 일이 될 것이다. 
+왜냐하면 일단 현재 문장을 deep learning 으로 학습한다는 것은 문장의 구조나 형태소 등의 분석이 전혀 없고
+(있다한들 그것은 신경망 각 노드의 값일 뿐이지 의미가 있는 값은 아니다.)
+그렇다면 현재 갖고 있는 데이터 온도는 25도 이고, 습도는 몇 %이니 우산을 준비하라고 하던지, 등의 데이터를 deep learning 된 
+신경망에 전혀 사용할 수 가 없는 것이다. 
+
+재미로(for FUN!!) 글을 쓰는 것은 가능하나, 원하는 데이터를 활용하여 글을 쓰게 할 수 있을까?
+
+context 를 활용해서 글을 쓰는 논문은 나와있다 얼마나 효과가 있을지는 모르겠지만.
+(CONTEXT DEPENDENT RECURRENT NEURAL NETWORK LANGUAGE MODEL )
+https://www.semanticscholar.org/paper/Context-dependent-recurrent-neural-network-Mikolov-Zweig/04e0fefb859f4b02b017818915a2645427bfbdb2/pdf
+
+
+
+
+
+
 
 1. CONTEXT DEPENDENT RECURRENT NEURAL NETWORK LANGUAGE MODEL 
 PAPERS : https://www.semanticscholar.org/paper/Context-dependent-recurrent-neural-network-Mikolov-Zweig/04e0fefb859f4b02b017818915a2645427bfbdb2/pdf
