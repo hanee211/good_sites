@@ -53,3 +53,17 @@ Tomas Mikolov
 
 - General explanation of RNN and compare result between feedforward neural network and RNN
 - denote many result about comparing between models and data
+
+
+3. Multi-Context Recurrent Neural Network for Time Series Applications
+B. Q. Huang, Tarik Rashid and M-T. Kechadi
+http://waset.org/publications/3524/multi-context-recurrent-neural-network-for-time-series-applications
+
+a multi-context recurrent network for time series analysis.
+SRN(simply recurrent  network)  - shortcoming in terms of learning speed and accuracy 
+=> to solve this problems, MCRN(multi-context recurrent network) 
+
+
+4. Incorporating Side Information into Recurrent Neural Network Language Models
+https://www.researchgate.net/profile/Vu_Hoang6/publication/299410055_Incorporating_Side_Information_into_Recurrent_Neural_Network_Language_Models/links/56f4a85008ae7c1fda2d78bf.pdf
+
