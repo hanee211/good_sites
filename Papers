@@ -34,11 +34,12 @@ https://www.semanticscholar.org/paper/Context-dependent-recurrent-neural-network
 keyword : context, deep learning, RNN, NLP, 
 
 
-
-
-
-
 1. CONTEXT DEPENDENT RECURRENT NEURAL NETWORK LANGUAGE MODEL 
 PAPERS : https://www.semanticscholar.org/paper/Context-dependent-recurrent-neural-network-Mikolov-Zweig/04e0fefb859f4b02b017818915a2645427bfbdb2/pdf
-ppt : http://www.fit.vutbr.cz/research/groups/speech/servite/2010/rnnlm_mikolov.pdf
 
+2. Recurrent neural network based language model(20, 7, 2010)
+(http://www.fit.vutbr.cz/research/groups/speech/servite/2010/rnnlm_mikolov.pdf)
+Tomas Mikolov
+
+- General explanation of RNN and compare result between feedforward neural network and RNN
+- denote many result about comparing between models and data
