@@ -37,6 +37,16 @@ keyword : context, deep learning, RNN, NLP,
 1. CONTEXT DEPENDENT RECURRENT NEURAL NETWORK LANGUAGE MODEL 
 PAPERS : https://www.semanticscholar.org/paper/Context-dependent-recurrent-neural-network-Mikolov-Zweig/04e0fefb859f4b02b017818915a2645427bfbdb2/pdf
 
+- to condition the hidden and output vectors on a continuous space representation of the previous words and sentecnes.
+- Latent Dirichlet Allocation, we are able to avoid the data fragmentation associated with the traditional processing
+building multiple topic-specific language models. 
+
+- context vectors 
+- contextual real-valued input vector in associated with each word. 
+- Thie vector is used to convey contextual information about the sentence being modeled. 
+- IMPORTANT PAPER
+
+
 2. Recurrent neural network based language model(20, 7, 2010)
 (http://www.fit.vutbr.cz/research/groups/speech/servite/2010/rnnlm_mikolov.pdf)
 Tomas Mikolov
