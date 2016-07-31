@@ -67,3 +67,10 @@ SRN(simply recurrent  network)  - shortcoming in terms of learning speed and acc
 4. Incorporating Side Information into Recurrent Neural Network Language Models
 https://www.researchgate.net/profile/Vu_Hoang6/publication/299410055_Incorporating_Side_Information_into_Recurrent_Neural_Network_Language_Models/links/56f4a85008ae7c1fda2d78bf.pdf
 
+여기까지 보면 대략 contextural information 을 가지고 RNN 을 하려는 시도가 있음.
+다만 그 contextual information 의 detail level이 어느정도인지는 좀 더 조사가 필요함. 
+
+5. Show and Tell: A Neural Image Caption Generator
+https://arxiv.org/pdf/1411.4555.pdf
+
+
