@@ -31,8 +31,9 @@ https://www.semanticscholar.org/paper/Context-dependent-recurrent-neural-network
 
 
 그렇다면 현재 context 와 deep learning , RNN , NLP 등과 관련된 논문을 더 찾는다.
-keyword : context, deep learning, RNN, NLP, 
-
+keyword : context, deep learning, RNN, NLP, readily scale, trainable generator 
+oppsited keywordl : rule-based(templated-based) approache(Cheyer and Guzzoni, 2007), not easily scale to large open domain
+  corpus-based methods
 
 1. CONTEXT DEPENDENT RECURRENT NEURAL NETWORK LANGUAGE MODEL 
 PAPERS : https://www.semanticscholar.org/paper/Context-dependent-recurrent-neural-network-Mikolov-Zweig/04e0fefb859f4b02b017818915a2645427bfbdb2/pdf
@@ -73,4 +74,71 @@ https://www.researchgate.net/profile/Vu_Hoang6/publication/299410055_Incorporati
 5. Show and Tell: A Neural Image Caption Generator
 https://arxiv.org/pdf/1411.4555.pdf
 
+6. Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems
+http://arxiv.org/pdf/1508.01745v2.pdf
+-----------------------------------------------------------------------------------------------
+NLG(natural language generation) 
+ <Introduction>
+- a good generator usually depends on several factors: adequacy, fluency, readability and variation.
+- previous approaches
+ 1) ruled-based(or template-based) => robustness and adequacy but repetition, not easily scale to large open domain
+ 2) trainable generator => allow the model to adapt to different domains. but require a handcrafted generator to define
+    the decision space within which statistics can be used for optimisation
+ 3) corpus-based method -> by defining a flexible learning structure, aim to learn generation directly from data by adopting
+    over-generation and reranking paradigm
+    in which final responses are obtained by reranking a set of candidates generated from a stochastic generator.
+    
+    => But!!, weaknesses in the areas of traning data efficiency, accuracy and naturalness
+ 
+  ** this paper
+  - present a statistical NLG based on a semantically controlled Long Short-term memory(LSTM) recurrent network.
+  - it can learn from unaligned data by jointly optimising its sentence planning and surface realisation components using
+    a simple cross entropy training criterion without any heuristics, and good quality language variation is obtained simply
+    by randomly sampling the network outputs
 
+
+ <Related work>
+ - Conventional approaches to NLG typically divide the task into sentence planning and surface realisation
+  1) Sentence planning
+   Maps input semantic symbols into an intermediary form representing the utterance, e.g. a tree-like or template structure, 
+  
+  2) surface realisation
+   convert the intermediate structure into the final text
+   
+  => although statistical sentence planning has been explored previously, generating the most likely context-free derivations
+  given a corpus or maximising the expected reward using reinforcement learning, these methods still rely on a pre-existing, 
+  handcrafted generator.
+ 
+ - another approach #1
+ : to minimisze handcrafting, 
+ : Proposed Learning sentence planning rules directly from a corpus of uteerances lablled
+ => expensive 
+ 
+ - another approach #2
+ : phrase-based NLG system based on factored LMs that can learn from a semantically aligned corpus.
+ 
+ - another approache #3
+ : neural network-based approaches(1982), RNNLM(recurrent neural network-based language model, 2010)
+ => show the value of distributed representations and the ability to model arbitrarily long dependencies. 
+ 
+ - another approahces #4
+ - Sutskever et al.(2011) describes a simple variant of the RNN that can generate meaningful sentences by learning from a character-level corpus
+ 
+ - another approaches #5
+ Karpathy and Fei-Fei(2014) have demonstrated that an RNNNLM is capable of generating image descriptions by conditioning the network 
+ model on a pre-trained convolutional image feature representation
+ 
+ - another approahces #6
+ Zhang and Lapata(2014) describes interesting work using RNNs to generate Chinese poetry.
+ 
+-----------------------------------------------------------------------------------------------
+
+7. LSTM based Conversation Models
+http://arxiv.org/pdf/1603.09457v1.pdf
+
+
+8. Reducing the Dimensionality of Data with Neural Networks
+http://science.sciencemag.org/content/313/5786/504.full.pdf+html
+
+9. Show, Attend and Tell: Neural Image Caption Generation with Visual Attention
+http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf
