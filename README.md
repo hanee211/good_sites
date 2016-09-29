@@ -22,3 +22,8 @@ Good sites
 
 5. Math for programmer
   > http://darkpgmr.tistory.com/
+
+
+6. LISP
+  > https://opentutorials.org/module/2440
+  
