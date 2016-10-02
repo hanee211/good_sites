@@ -46,6 +46,11 @@ $ source ~/tensorflow/bin/activate.csh  # If using csh.
 # When you are done using TensorFlow, deactivate the environment.
 (tensorflow)$ deactivate
 
+##############################
+PyCharm 연동
+PyCharm 환경 설정에서 파이썬 인터프리터를 골라 사용
+
+
 
 
   
