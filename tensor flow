@@ -1,0 +1,51 @@
+1. install
+  
+  - reference site
+  https://www.tensorflow.org
+  https://www.tensorflow.org/versions/r0.11/get_started/os_setup.html#test-the-tensorflow-installation
+  
+  - problem
+  Max OS El caption 버전 이후로 pip 으로 설치가 안됨
+  
+  - solving
+  : virtualenv 를 활용
+  
+  Virtualenv installation
+$ sudo easy_install pip
+$ sudo pip install --upgrade virtualenv
+
+Create a Virtualenv environment in the directory ~/tensorflow
+$ virtualenv --system-site-packages ~/tensorflow
+
+
+Activate the environment:
+$ source ~/tensorflow/bin/activate  # If using bash
+$ source ~/tensorflow/bin/activate.csh  # If using csh
+(tensorflow)$  # Your prompt should change
+
+
+# Mac OS X, CPU only, Python 2.7:
+(tensorflow)$ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.11.0rc0-py2-none-any.whl
+
+# Python 2
+(tensorflow)$ pip install --upgrade $TF_BINARY_URL
+
+
+When you are done using TensorFlow, deactivate the environment.
+
+(tensorflow)$ deactivate
+$  # Your prompt should change back
+
+To use TensorFlow later you will have to activate the Virtualenv environment again:
+---------------------------------------------------------------------------------------
+$ source ~/tensorflow/bin/activate  # If using bash.
+$ source ~/tensorflow/bin/activate.csh  # If using csh.
+(tensorflow)$  # Your prompt should change.
+# Run Python programs that use TensorFlow.
+...
+# When you are done using TensorFlow, deactivate the environment.
+(tensorflow)$ deactivate
+
+
+
+  
