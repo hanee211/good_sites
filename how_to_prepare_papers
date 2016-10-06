@@ -1,15 +1,13 @@
-item:
-objective:
-date:
+before start:
+How many sensors do we have?
+- in home: temperature, humidity, 
 
-item:
-objective:
-date:
+motion detector, PIR : passive infrared sensor 
 
-item:
-objective:
-date
 
-item:
-objective:
-date:
+
+1. temperatur, 30
+-> Temperature is 30'
+
+
+2.
