@@ -30,3 +30,6 @@ Good sites
 7. ML Lecture in Korean
   > https://codeonweb.com/entry/5f15bf8e-d704-49e0-909a-db4450433b74
   > http://aikorea.org/cs231n/optimization-1/
+
+8. Good Tip for Git
+  > https://github.com/aurelien-rainone/tmux-gitbar
