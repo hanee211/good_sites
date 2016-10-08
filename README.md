@@ -27,3 +27,6 @@ Good sites
 6. LISP
   > https://opentutorials.org/module/2440
   
+7. ML Lecture in Korean
+  > https://codeonweb.com/entry/5f15bf8e-d704-49e0-909a-db4450433b74
+  > http://aikorea.org/cs231n/optimization-1/
