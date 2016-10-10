@@ -36,3 +36,6 @@ Good sites
   
 9. Father and daughter painting
   > http://www.artreset.co.kr/?m=bbs&bid=news&uid=352
+
+10. English News with various level version
+  > http://www.breakingnewsenglish.com
