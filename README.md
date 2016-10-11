@@ -39,3 +39,6 @@ Good sites
 
 10. English News with various level version
   > http://www.breakingnewsenglish.com
+  
+11. Learning French in youTube
+  > https://www.youtube.com/channel/UCK6TzBHhEUCKa6dgjlsVHEw
