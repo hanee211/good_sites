@@ -1,0 +1,18 @@
+1. Explain about the constituency and dependency tree
+
+  http://nlp.stanford.edu/software/stanford-dependencies.shtml
+  
+  
+  1) Why do choose dependency rather than constituency for syntax : A Formal Point of View
+    http://www.ruslang.ru/doc/melchuk_festschrift2012/Kahane.pdf
+  
+  2) Dependencies vs. Constituents for Tree-Based Alignment
+    https://www.cs.rochester.edu/~gildea/gildea-emnlp04.pdf
+  
+  3) A Fundamental Algorithm for Dependency Parsing
+    http://web.stanford.edu/~mjkay/covington.pdf
+    
+  4) Why is constituency needed, since dependency gets the job done more easily and economically?
+    http://linguistics.stackexchange.com/questions/7280/why-is-constituency-needed-since-dependency-gets-the-job-done-more-easily-and-e
+    
+  5) 
