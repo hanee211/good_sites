@@ -42,3 +42,6 @@ Good sites
   
 11. Learning French in youTube
   > https://www.youtube.com/channel/UCK6TzBHhEUCKa6dgjlsVHEw
+  
+12. About Books
+  > http://www.sparknotes.com/
