@@ -1,0 +1,20 @@
+Optimizing Select Conditions on GPUs
+> http://delivery.acm.org/10.1145/2490000/2485282/a4-sitaridi.pdf?ip=210.94.41.89&id=2485282&acc=ACTIVE%20SERVICE&key=F955AB127CBBCDEB%2EF955AB127CBBCDEB%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=691178536&CFTOKEN=10837747&__acm__=1478474468_560a8bffc93800bd9a8fa4e2b1da4383
+
+Accelerating SQL Database Operationson a GPU with CUDA
+> http://delivery.acm.org/10.1145/1740000/1735706/p94-bakkum.pdf?ip=210.94.41.89&id=1735706&acc=ACTIVE%20SERVICE&key=F955AB127CBBCDEB%2EF955AB127CBBCDEB%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=691178536&CFTOKEN=10837747&__acm__=1478474523_2137b2c3f4b2380e54a6f530d2da5772
+
+Enhancing speed of SQL database operations using GPU
+> http://ieeexplore.ieee.org/document/7087144/?arnumber=7087144&tag=1
+
+*** Accelerating Braided B+ Tree Searches on a GPU withCUDA
+> http://www.cs.virginia.edu/~skadron/Papers/fix_a4mmc11.pdf
+
+
+Accelerated SQLite Database using GPUs
+http://wscg.zcu.cz/wscg2014/Short/K17-full.pdf
+
+
+
+https://www.sqlite.org/howtocompile.html
+
