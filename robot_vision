@@ -20,3 +20,30 @@ https://www.r-project.org/
 http://dahtah.github.io/imager/imager.html
 https://cran.r-project.org/web/packages/imager/vignettes/gettingstarted.html
 http://blog.thedigitalgroup.com/rajendras/2015/06/12/image-processing-and-analysis-in-r/
+
+
+Robot Vision
+
+- 교안
+
+Thermal Noise(additvie gaussian noise)   - thermal:열의, 뜨거운, 온천의
+- fluctuation : 동요 ,변동, 파동
+- 
+
+
+Shot noise(random counts, posisson noise)
+- when the signal from a photosensor is amplified, this noise is also amplified.
+- photodiode = 반도체 소자
+- proportional , 균형잡힌
+- photons 광자
+
+
+Salt-and-pepper(replacement nosie)
+
+rician noise(magnitude of 2D gaussian, MRI)
+
+## homework
+- finding Edge at Image
+  using canny or whatever
+
+
