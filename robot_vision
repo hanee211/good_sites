@@ -47,3 +47,9 @@ rician noise(magnitude of 2D gaussian, MRI)
   using canny or whatever
 
 
+
+http://www.scipy-lectures.org/advanced/image_processing/
+https://docs.scipy.org/doc/numpy/reference/generated/numpy.dtype.html
+https://www.safaribooksonline.com/library/view/programming-computer-vision/9781449341916/ch01.html#examples_of_processing_images_with_pildo
+
+
