@@ -1,9 +1,23 @@
 
 ## hough transform
 http://blog.naver.com/PostView.nhn?blogId=wkdtjsgur100&logNo=150171056964
+http://makeshare.org/bbs/board.php?bo_table=raspberrypi&wr_id=10
+http://iskim3068.tistory.com/51
 
 
+--- for project -------------
+1) 3D Object Detection and Viewpoint Estimation with aDeformable 3D Cuboid Model
+http://www.cs.toronto.edu/~fidler/papers/fidler_et_al_nips12.pdf
 
+2) Detecting orientation/symmetry in an image
+https://kr.mathworks.com/matlabcentral/answers/124994-detecting-orientation-symmetry-in-an-image
+
+3) Learning 3-D Object Orientation from Images
+http://ai.stanford.edu/~asaxena/papers/learning_3d_object_orientation.pdf
+
+4) Determining object orientation from a single imageusing multiple information sources
+http://repository.cmu.edu/cgi/viewcontent.cgi?article=1522&context=robotics
+---------------------------------------------
 
 1. Robot Vision Homepage
 http://bit.ly/ece5752
