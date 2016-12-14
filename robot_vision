@@ -6,6 +6,16 @@ http://iskim3068.tistory.com/51
 
 
 --- for project -------------
+
+Estimate the pose of an object (for ease use Rubik cube) using images from a single camera.
+you can use any algorithm 
+
+best is to:
+find a paper (IEEE or any other) from internet and implement its algorithm
+
+Deadline21st December before class (3pm)
+>>>>>>>>>>>>>>
+
 1) 3D Object Detection and Viewpoint Estimation with aDeformable 3D Cuboid Model
 http://www.cs.toronto.edu/~fidler/papers/fidler_et_al_nips12.pdf
 
@@ -21,6 +31,7 @@ http://repository.cmu.edu/cgi/viewcontent.cgi?article=1522&context=robotics
 
 1. Robot Vision Homepage
 http://bit.ly/ece5752
+
 
 
 > Robot Vision
