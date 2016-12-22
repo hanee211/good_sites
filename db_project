@@ -17,4 +17,61 @@ http://wscg.zcu.cz/wscg2014/Short/K17-full.pdf
 
 
 https://www.sqlite.org/howtocompile.html
+<그림, RUN의 방법>1. 데이터 베이스의 정렬 방법 -> merge sort For sorting data, most database systems use external merge sort, 
+which is an general-purpose sorting algoritm.  General external merge sort is consisted with 2 steps, generally. 
+First step is read one page and sort it, and write it.   In this step, the sorting operation is done within just one each page. 
+Next step is merge phrase in which each sorted page  is merged through one buffer page and if the buffer is fulled then it is 
+written to the disk. The most basic merge sort algorithm is 2-way merge sort. 2-way sort requires 3 buffer pages, first 
+two buffer page is for sorting and last one is for buffering for merge.  The based idea  of external merge sort is a divide 
+and conquer algorithm. If you have a data which is need to sort, then first divide it, and merge it.  
 
+formal 들어가고... cost 관련 어쩌고 저쩌고 
+
+But, general external merge sort use more than 3 buffer pages. Most it use N pages to sort a file or data.
+From that we can merge more than  input buffers at a time. It can give fanout affects, and it give also better performance.   
+general cost function of it.   Anyway, external merge sort is key algorithm to sort for database system, and
+if we were improved it then we can better performance for using database system.  
+
+a. 머지 소트 관련 4~5     As we mentioned above, merge sort give a stable and effective performance for sorting data. 
+But it has a bottlneck in itself for its mechanism of doing.   << Figure 1>>  shows that a how to DBMS sort data using
+multi-way-sort.     The speed of sort operation is affected by the number of B pages which has sorted data for merging. 
+Bigger the number B means faster speed of sort.     But even though many B page is running simultaneously and logically,
+real job is not done like that because of limitation of number of CPUs,   and it is a bottleneck of sort operation    
+Merger sort 는 in memory sort 와는 달리, 데이터의 I/O 속도가 가장 중요하고 I/O 가 가장 적게 하는 방법을 목표로 한다.   -
+머지 소트 방법, RUN개념, 내부적으로 소트 한후, merge만 반복적으로 함.   - I/O 속도가 중요  - 계산 속도는 I/O 속도에 비하면 무시할 수준
+The slow speed of I/O translation is key bottle neck for not only database system but computer system itself.   
+Comparing with the speed of cpu operating, the speed of translation I/O data between hard disk drive(HDD) and main memory
+is extremely slow, and  how to deal this problem is a one of the main problem of computer science.    Anyway, even though
+the idea of external sort algorithm and it's running stragegy is great, since the bottleneck of it's meachism   there is a 
+limitation for increasing the speed of database system using external sort algorithm. 
+
+
+
+
+첫번째 Internal SQLite 의 개선 - merge 소트 하는 부분을 개선 - merge 소트 부분 - 각각의 모듈 설명 - Loop 가 있고
+, 또 다른 Loop 가 있어서, 
+어디 부분을 개선하면 됨  제안 시스템에 대한 설명,  두번째, Sqlite 와 Shell을 묶어주는 부분 개선  - 첫번째 방법이 너무 복잡함. - 
+
+
+
+b. merge sort의 단점  - 병목 현상  - 개선 방향
+
+
+선 방향1. CUDA 사용 CUDA 설명   CUDA is a kind of application programming interface and also a parallel computing platform create by nvidia.
+Through this, software programmar and developers cand use graphcis processing unit for general purpose processing which support CUDA
+. Main feature of it, using this the engineers make parallel programming more easier, like making program with another computer 
+program language and libraries.   We try to use CUDA for enhanceing the performance of SQLite sorting performance. 
+As we mentioned above, external sort algorithm has a bottlenet for its meachanism, which is even though there are many logical 
+process for better speed,  physically there can not be so many process in cpu, the total speed is not much faster comparing with 
+the smaller process.   But using CUDA can make this situation better, since it support parallel programming, and actually it has
+thousands processor in it.  So it we upoad data to GPU  
+
+
+
+<그림, 쿠다 사용 그림> - 런을 GPU에 할당. - 병렬적으로 수행 - 병렬적, 분산 처리
+가 핵심 - I/O을 위해서 기다릴 일이 없음 -> 병목 현상 사라짐  - 아쉬운 점은 정렬 후반부로 갈 수록 병렬성이 떨어짐.  
+
+- 하지만 전체적으로 
+볼 때는 성능 개선을 가져옴.
+
+첫번째 Internal SQLite 의 개선 - merge 소트 하는 부분을 개선 - merge 소트 부분 - 각각의 모듈 설명 - Loop 가 있고, 또 다른 Loop 가 있어서, 어디 부분을 개선하면 됨  제안 시스템에 대한 설명,  두번째, Sqlite 와 Shell을 묶어주는 부분 개선  - 첫번째 방법이 너무 복잡함. - 
