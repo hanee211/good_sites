@@ -71,7 +71,14 @@ thousands processor in it.  So it we upoad data to GPU  
 <그림, 쿠다 사용 그림> - 런을 GPU에 할당. - 병렬적으로 수행 - 병렬적, 분산 처리
 가 핵심 - I/O을 위해서 기다릴 일이 없음 -> 병목 현상 사라짐  - 아쉬운 점은 정렬 후반부로 갈 수록 병렬성이 떨어짐.  
 
-As you see
+Fig ~ , show that mechanism of how to assign run to GPU in CUDA parallel programming
+With this way, SQLite do not need to wait until CPU is free, since there are a lot of slot to calculate in GPU, 
+and most all run will be sorted just in 1 step. Or even if there are more data than number of processor of GPU, 
+a few more stpes will be needed.
+
+But this advantage will be vanished when external merge sort goes on to the end. However, total benefit from 
+using CUD with GPU will be more th
+
 
 - 하지만 전체적으로 
 볼 때는 성능 개선을 가져옴.
