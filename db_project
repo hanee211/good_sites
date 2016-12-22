@@ -71,7 +71,22 @@ thousands processor in it.  So it we upoad data to GPU  
 <그림, 쿠다 사용 그림> - 런을 GPU에 할당. - 병렬적으로 수행 - 병렬적, 분산 처리
 가 핵심 - I/O을 위해서 기다릴 일이 없음 -> 병목 현상 사라짐  - 아쉬운 점은 정렬 후반부로 갈 수록 병렬성이 떨어짐.  
 
+As you see
+
 - 하지만 전체적으로 
 볼 때는 성능 개선을 가져옴.
 
-첫번째 Internal SQLite 의 개선 - merge 소트 하는 부분을 개선 - merge 소트 부분 - 각각의 모듈 설명 - Loop 가 있고, 또 다른 Loop 가 있어서, 어디 부분을 개선하면 됨  제안 시스템에 대한 설명,  두번째, Sqlite 와 Shell을 묶어주는 부분 개선  - 첫번째 방법이 너무 복잡함. - 
+첫번째 Internal SQLite 의 개선 - merge 소트 하는 부분을 개선 - merge 소트 부분 - 각각의 모듈 설명 - Loop 가 있고,
+또 다른 Loop 가 있어서, 어디 부분을 개선하면 됨  제안 시스템에 대한 설명,  두번째, Sqlite 와 Shell을 묶어주는 부분 개선 
+
+
+- 첫번째 방법이 너무 복잡함.
+But, first method is too complicate and it need a lot time to analysis SQLite whole source code, 
+so, we try to do another method to enhance the performance of SQLite statements cotaining 'Order by' command. 
+
+It consisted of two part, first part is CUDA Shell, which is a kind of sqlite client program in CUDA module.
+Generally, SQLite can not be implemented by itself, but it is embedded some program, and it works as a server. 
+Like this, we implement SQLite shell program using CUDA, and it request query to SQLite to get data. 
+Best way to enhance the performance of SQLite maybe modify it's source code where it is needed. Instead of that,
+we request query to SQLite without 'Order by' statement, and we sort that data using CUDA programming. 
+
