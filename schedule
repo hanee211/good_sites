@@ -1,0 +1,48 @@
+2:00	[이단계 분류기를 이용한  UI용 모바일 제스쳐 인식 ] 간단히 봄	
+2:22	LSTM 을 이용한 전력 데이터 예측	"다 읽어봤지만, 드는 생각은, 컨택스트에 맞추어서 문장을 생성하는 것은 이미 한물간 주제 같다는 것..
+
+1) 정확하게는 못한다
+2) 예를 들어 문장을 줄이는 것. 이것은 
+3) 그래서 차원이 다르게 가면 유리하다.
+"
+2:30	[문서 주제에 따른 문장 생성을 위한 LSTM 기반 언어 학습 모델]	
+2:50	프린트	
+3:10	[문서 주제에 따른 문장 생성을 위한 LSTM 기반 언어 학습 모델]	"주제와 해당 주제에서 단어가 가지는 문맥적 의미
+문서 요약의 경우, 주어진 문서의 주제와 그에 따른 단어의 문맥을 고려하는 것이 중요"
+		"내가 글을 쓸 때, 예를 들어 올림픽 이라는 주제로 글을 쓴다고 한다면,
+
+최근에 있던 올림픽에 대해서 생각할 것이고, 
+올림픽을 보았으면서 기억나는 장면들,
+금메달 은메달 등 올림픽과 관련된 물건들을 위주로 글을 쓸 것이다.
+
+"
+		"일단 주제가 어떻게 표현되는 가?
+
+내생각? -> 일반적으로 접근할 수 있는 상식적인 생각
+상식적이다보다는 현상을 근본적으로 고찰하는 방법
+
+- 여기 참고 논문에서 어떻게 기술하고 있는지"
+		
+3:34	"Question
+내가 테스트해본 기존 RNN 에서는 단어나 캐릭터에 대한 One-hot vector 가 정해져 있고, 궁긍적으로 계산하는 것은 RNN 노드에 존재하는 weight 들이었음.
+그런데 문서 주제에 따른 문장 생성을 위한 LSTM 기반 언어 학습 모델이라는 것은 단어또한 구해야 하는 값인가 ? 아니면 문서 값과 단어 값이 미리 정해 져 있고 이를 이용한 변형 LSTM 의 weight 를 구하는 것이 문제인가?"	답 Word vector 는 미리 정해져 있고, LSTM 의 weight 값을 정하는 것임. 그리고 이 논문에서는 LSTM 들어가기전 Word 와 Document 의 대한 추가적인 weight 가 존재함.
+4:07	[문서 주제에 따른 문장 생성을 위한 LSTM 기반 언어 학습 모델]	"비교적 심플하게 정리가 되어 있었음
+문서 주제에 따른 문장 생성을 위해서, Many-to-one 모델과 추가적인 D,W 벡터를 추가하였음.
+
+주제가 주어졌을 떄 관련된 문장이 생성됨"
+4:10	문장 요약	"만약 문장 요약을 위해서라면, 
+해당 글에 대한 context 를 이해하고, 중요한 단어를 선택할 수 있으며, 내용을 압축할 수 있어야 함"
+		만약 책 한권을 주고 요약하라면 어떻게 해야 할 것인가?
+4:14	영문 context 기반 generation 관련 논문 읽기 필요	프린트 완료
+4:35	"Reccurent neural entwork based language model
+- Tomas Mikolov, Martin Karafiat"	"Sequential data prediction is considered by many as a key problem in machine learning and AI
+
+The goal of statistical language modeling is to predict the next word in textual data given context; thus we are dealing with sequential data prediction problem when constructing language models."
+		"기본적인 RNN 모델이용
+Speech Recognition 에 사용함."
+4:58	Extensions of recurrent neural network language model	아마 [문서 주제에 따른 문장 생성을 위한 LSTM 기반 언어 학습 모델] 이 논문에 여기서 아이디어를 가져오지 않았을까 생각한다.
+		We present serveral modifications of the original recurrent neural network language model.
+		X -> context 기반의 RNN 이 아님.
+5:10	프린트	
+5:24	[Incorporating Side Information into Recurrent Neural Network Language Models]	
+7:00	Show,Attend and Tell	
