@@ -1,0 +1,112 @@
+import tensorflow as tf
+import numpy as np
+	
+UNK = "UNKNOWN"
+PAD = 1
+hidden_size = 20
+
+
+def indexing(text):
+	words = list()
+	for sentence in text:
+		words.extend(sentence.replace('\n', '').split(' '))
+	
+	words = list(set(words))
+	idx2word = [0] + [PAD] + [UNK] + words
+	word2idx = {w:i for i,w in enumerate(idx2word)}
+
+	return idx2word, word2idx, words
+	
+def encoding_text(text, idx2word, word2idx):
+	max_len = 0
+	encoding_text = list()
+	
+	for sentence in text:
+		sentence = sentence.replace('\n', '').split(' ')
+		encoding_text.append([word2idx[w] for w in sentence])
+		
+		if(max_len < len(sentence)):
+			max_len = len(sentence)
+			
+	
+	for sentence in encoding_text:
+		if len(sentence) < max_len:
+			pad_size = max_len - len(sentence)
+			sentence.extend([PAD for i in range(pad_size)])
+			
+	return encoding_text
+	
+	
+	
+	
+#--------------------------------------------------------------------------	
+#--------------------------------------------------------------------------	
+#
+#							 Start Program 
+#
+#--------------------------------------------------------------------------	
+#--------------------------------------------------------------------------	
+
+text = ["I like this city and this country very much",
+			"I have great time with my family today",
+			"My room has a lot of books and one table and one chair and bookshelf",
+			"I am living in Suwon Korea",
+			"This is a great book I have ever read in my life",
+			"This is incredible cookies, and I think no one can easily make them"]
+			
+
+			
+idx2word, word2idx, words = indexing(text)
+e_text = encoding_text(text, idx2word, word2idx)
+
+
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+
+
+seq_length = len(e_text[0])	
+batch_size = len(e_text)
+
+
+X = [tf.placeholder(dtype=tf.int32, shape=[seq_length]) for i in range(batch_size)]
+Y = [tf.placeholder(dtype=tf.int32, shape=[seq_length]) for i in range(batch_size)]
+Y_input = [tf.placeholder(dtype=tf.int32, shape=[seq_length]) for i in range(batch_size)]
+PREVIOUS = tf.placeholder(tf.bool)
+
+#------------------------------------------------------------------------
+feed_basic = dict()
+for t in range(batch_size):
+	feed_basic[X[t]] = e_text[t]
+	feed_basic[Y_input[t]] = [0] + e_text[t][:-1]
+	feed_basic[PREVIOUS] = False
+
+	
+feed_loss = feed_basic
+for t in range(batch_size):
+	feed_loss[Y[t]] = e_text[t]
+	
+feed_predict = feed_basic
+feed_predict[PREVIOUS] = True
+#------------------------------------------------------------------------
+
+cell = tf.contrib.rnn.BasicLSTMCell(num_units=5, state_is_tuple=True)
+
+decode_outputs, decode_states = tf.contrib.legacy_seq2seq.embedding_rnn_seq2seq(X, Y_input, cell, len(idx2word), len(idx2word), 10, output_projection=None, feed_previous=PREVIOUS)
+	
+loss_weights = [ tf.ones_like(y, dtype=tf.float32) for y in Y ]
+
+loss = tf.contrib.legacy_seq2seq.sequence_loss(decode_outputs, Y, loss_weights)
+train = tf.train.AdamOptimizer(learning_rate=0.01).minimize(loss)
+
+
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+
+
+for i in range(1000):
+	l, _ = sess.run([loss,train], feed_dict=feed_loss)
+	
+	if i % 100 == 0:
+		result = sess.run(decode_outputs, feed_dict=feed_predict)
+		print(i, "loss: " , l , "result : ", result )
+		
